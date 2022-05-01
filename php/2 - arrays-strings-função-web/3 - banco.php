@@ -1,19 +1,20 @@
-<?php
-$contasCorrente = [
-  '123.456.789-10' => [
-    'titular' => 'Ygor Evaldt',
-    'saldo' => 1500
+<?php 
+
+$contaCorrente = [
+  '039.193.440-65' => [
+    'titular' => "Ygor Evaldt",
+    'telefone' => "(51) 98331-3468",
+    'endereço' => "Três Cachoeiras - RS",
+    'saldo' => 287.00
   ],
-  '456.123.789-10' =>  [
-    'titular' => 'Joaquim Pereira',
-    'saldo' => 2000
-  ],
-  '789.456.132-00' => [
-    'titular' => 'Cassia Fernandes',
-    'saldo' => 1200
+  '041.836.250-50' => [
+    'titular' => "Thais Constant",
+    'telefone' => "(51) 99886-7246",
+    'endereço' => "Três Cachoeiras - RS",
+    'saldo' => 100.00
   ]
 ];
 
-foreach ($contasCorrente as $cpf => $conta) {
-  echo " Cpf: " . $cpf . " - " .  $conta['titular'] . PHP_EOL;
+foreach ($contaCorrente as $cpf => $conta) {
+  echo  $cpf . "\nTitular - " . $conta['titular'] . "\nTelefone: " . $conta['telefone'] . "\nEndereço: " . $conta['endereço'] . "\nSaldo: $" . $conta['saldo'] . PHP_EOL . PHP_EOL;
 }
