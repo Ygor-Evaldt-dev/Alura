@@ -1,5 +1,9 @@
 <?php 
 
+function exibeMensagem($mensagem) {
+  echo $mensagem . PHP_EOL;
+}
+
 $contaCorrente = [
   '039.193.440-65' => [
     'titular' => "Ygor Evaldt",
@@ -16,5 +20,5 @@ $contaCorrente = [
 ];
 
 foreach ($contaCorrente as $cpf => $conta) {
-  echo  $cpf . "\nTitular - " . $conta['titular'] . "\nTelefone: " . $conta['telefone'] . "\nEndereço: " . $conta['endereço'] . "\nSaldo: $" . $conta['saldo'] . PHP_EOL . PHP_EOL;
+  exibeMensagem('TITULAR = ' . $conta['titular'] . PHP_EOL . 'CPF = ' . $cpf . PHP_EOL .'SALDO = $' . $conta['saldo'] . PHP_EOL);
 }
