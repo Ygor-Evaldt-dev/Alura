@@ -1,11 +1,11 @@
 <?php
-
-/* Para mensagens com quebra de linha */
-function exibeMensagem($mensagem) {
-  echo $mensagem . PHP_EOL; 
+/* Para exibir as contas */
+function exibeContas(array $conta) {
+  ['titular' => $titular, 'saldo' => $saldo] = $conta;
+  echo "<li> Titular: $titular. Saldo: $saldo </li>"; 
 }
 
-/* funçãop para saque */
+/* função para saque */
 function saque(array $conta, float $valor): array 
 {
   if ($conta['saldo'] < $valor) {
@@ -17,7 +17,7 @@ function saque(array $conta, float $valor): array
   return $conta;
 }
 
-/* funçãop para depósitos */
+/* função para depósitos */
 function deposito(array $conta, float $valor): array 
 {
   if ($valor <= 0) {
@@ -26,5 +26,12 @@ function deposito(array $conta, float $valor): array
   else {
     $conta['saldo'] += $valor;
   }
+  return $conta;
+}
+
+/* nome com letra maiuscula */
+function nomeMaiusculo (array $conta): array
+{
+  $conta['titular'] = mb_strtoupper($conta['titular']);
   return $conta;
 }
