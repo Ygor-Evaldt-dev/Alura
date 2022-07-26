@@ -29,13 +29,10 @@ $contasCorrente['041.083.602-27'] = [
 unset($contasCorrente['041.083.602-27']);
 
 /* operações de saque */
-$contasCorrente['039.193.440-65'] = saque($contasCorrente['039.193.440-65'], 100);
+$contasCorrente['039.193.440-65'] = saque($contasCorrente['039.193.440-65'], 400);
 
 /* operações de depósito */
-$contasCorrente['041.836.250-50'] = deposito($contasCorrente['041.836.250-50'], 1000);
-
-/* nome maisculo */
-// $contasCorrente['041.836.250-50'] = nomeMaiusculo($contasCorrente['041.083.602-27']);
+$contasCorrente['041.836.250-50'] = deposito($contasCorrente['041.836.250-50'], 2000);
 
 ?>
 
